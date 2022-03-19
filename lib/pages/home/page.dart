@@ -20,7 +20,10 @@ class HomePage extends StatelessWidget {
           centerTitle: true,
           title: const Text(
             'Deedzify',
-            style: TextStyle(fontFamily: 'PaletteMosaic',fontSize: 26,color: const Color(0xFF3CC890)),
+            style: TextStyle(
+                fontFamily: 'PaletteMosaic',
+                fontSize: 26,
+                color: const Color(0xFF3CC890)),
           )),
       body: FutureBuilder(
         future: readJson(),
@@ -31,52 +34,49 @@ class HomePage extends StatelessWidget {
             return ListView.builder(
               itemCount: songLength,
               itemBuilder: (BuildContext context, int index) {
-                return Padding(
-                  padding: const EdgeInsets.only(left: 8, top: 8, right: 8),
-                  child: Card(
-                      elevation: 3,
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 8.0),
-                        child: ListTile(
-                          onTap: () => Get.to(const LyricPage()),
-                          leading: Image.network(songs['songs'][index]['cover']),
-                          title: Text(
-                            songs['songs'][index]['name'],
-                            style: const TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          subtitle: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                songs['songs'][index]['artist'],
-                                style: const TextStyle(
-                                    color: Colors.grey,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Row(
-                                children: [
-                                  Icon(AntIcons.star,
-                                      size: 12, color: Colors.amber),
-                                  Icon(AntIcons.star,
-                                      size: 12, color: Colors.amber),
-                                  Icon(AntIcons.star,
-                                      size: 12, color: Colors.amber),
-                                  Icon(AntIcons.star_outline, size: 12),
-                                  Icon(AntIcons.star_outline, size: 12),
-                                  SizedBox(width: 8),
-                                  Text(
-                                    "(" + Random().nextInt(100).toString() + ")",
-                                    style: const TextStyle(
-                                        color: Colors.grey,
-                                        fontWeight: FontWeight.bold),
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                          trailing: Icon(AntIcons.right_outline),
+                return Card(
+                  // color: Colors.white10,
+                  margin: EdgeInsets.only(left: 8, top: 8, right: 8, bottom: 4),
+                  elevation: 3,
+                  child: ListTile(
+                    dense: true,
+                    onTap: () => Get.to(const LyricPage()),
+                    leading: Image.network(songs['songs'][index]['cover']),
+                    title: Text(
+                      songs['songs'][index]['name'],
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          songs['songs'][index]['artist'],
+                          style: const TextStyle(
+                              color: Colors.grey, fontWeight: FontWeight.bold),
                         ),
-                      )),
+                        Row(
+                          children: [
+                            Icon(AntIcons.star, size: 12, color: Colors.amber),
+                            Icon(AntIcons.star, size: 12, color: Colors.amber),
+                            Icon(AntIcons.star, size: 12, color: Colors.amber),
+                            Icon(AntIcons.star_outline, size: 12),
+                            Icon(AntIcons.star_outline, size: 12),
+                            SizedBox(width: 4),
+                            Text(
+                              "(" + Random().nextInt(100).toString() + ")",
+                              style: const TextStyle(
+                                color: Colors.grey,
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                    trailing: Icon(
+                      AntIcons.right_outline,
+                      size: 16,
+                    ),
+                  ),
                 );
               },
             );
@@ -91,7 +91,7 @@ class HomePage extends StatelessWidget {
         onPressed: () {
           Get.to(WysiwygPage());
         },
-        backgroundColor: Color(0xFF3CC890),
+        backgroundColor: Color(0xFFFECA57),
         child: const Icon(CupertinoIcons.add),
       ),
       bottomNavigationBar: Obx(
@@ -99,22 +99,22 @@ class HomePage extends StatelessWidget {
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(AntIcons.home_outline),
-              label: 'Home',
+              label: 'Feeds',
               activeIcon: Icon(AntIcons.home),
             ),
             BottomNavigationBarItem(
               icon: Icon(AntIcons.heart_outline),
               activeIcon: Icon(AntIcons.heart),
-              label: 'Business',
+              label: 'Favorite',
             ),
             BottomNavigationBarItem(
-              icon: Icon(AntIcons.alert_outline),
-              activeIcon: Icon(AntIcons.alert),
-              label: 'School',
+              icon: Icon(AntIcons.user),
+              activeIcon: Icon(AntIcons.user),
+              label: 'Your',
             ),
           ],
           currentIndex: _selectedIndex.value,
-          selectedItemColor: Color(0xFFFECA57),
+          selectedItemColor: Color(0xFF3CC890),
           unselectedItemColor: Colors.white70,
           backgroundColor: const Color(0xFF161725),
           onTap: _onItemTapped,

@@ -22,17 +22,18 @@ class HomePage extends StatelessWidget {
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               var songs = json.decode(snapshot.data);
-              ListView.builder(
-                itemCount: songs["songs"],
+              var songLength = (songs['songs'] as List).toList().length;
+              return ListView.builder(
+                itemCount: songLength,
                 itemBuilder: (BuildContext context, int index) {
                   return ListTile(
                     onTap: () => Get.to(const LyricPage()),
                     leading: const Icon(Icons.list),
                     title: Text(
-                      songs[index].name,
+                      songs['songs'][index]['name'],
                     ),
                     subtitle: Text(
-                      songs[index].artist,
+                      songs['songs'][index]['artist'],
                       style: const TextStyle(color: Colors.green, fontSize: 15),
                     ),
                   );

@@ -14,7 +14,7 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Sukhumvit',
       ),
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }

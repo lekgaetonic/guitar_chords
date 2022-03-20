@@ -14,16 +14,17 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF202134),
+      backgroundColor: const Color.fromARGB(255, 40, 42, 66),
       appBar: AppBar(
           backgroundColor: const Color(0xFF161725),
           centerTitle: true,
           title: const Text(
             'Deedzify',
             style: TextStyle(
-                fontFamily: 'PaletteMosaic',
-                fontSize: 26,
-                color: const Color(0xFF3CC890)),
+              fontFamily: 'PaletteMosaic',
+              fontSize: 26,
+              color: Color(0xFF3CC890),
+            ),
           )),
       body: FutureBuilder(
         future: readJson(),
@@ -35,8 +36,9 @@ class HomePage extends StatelessWidget {
               itemCount: songLength,
               itemBuilder: (BuildContext context, int index) {
                 return Card(
-                  // color: Colors.white10,
-                  margin: EdgeInsets.only(left: 8, top: 8, right: 8, bottom: 4),
+                  color: const Color(0xFF161725),
+                  margin: const EdgeInsets.only(
+                      left: 8, top: 8, right: 8, bottom: 0),
                   elevation: 3,
                   child: ListTile(
                     dense: true,
@@ -44,7 +46,10 @@ class HomePage extends StatelessWidget {
                     leading: Image.network(songs['songs'][index]['cover']),
                     title: Text(
                       songs['songs'][index]['name'],
-                      style: const TextStyle(fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                     ),
                     subtitle: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,25 +61,46 @@ class HomePage extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            Icon(AntIcons.star, size: 12, color: Colors.amber),
-                            Icon(AntIcons.star, size: 12, color: Colors.amber),
-                            Icon(AntIcons.star, size: 12, color: Colors.amber),
-                            Icon(AntIcons.star_outline, size: 12),
-                            Icon(AntIcons.star_outline, size: 12),
-                            SizedBox(width: 4),
+                            const Icon(
+                              AntIcons.star,
+                              size: 12,
+                              color: Colors.amber,
+                            ),
+                            const Icon(
+                              AntIcons.star,
+                              size: 12,
+                              color: Colors.amber,
+                            ),
+                            const Icon(
+                              AntIcons.star,
+                              size: 12,
+                              color: Colors.amber,
+                            ),
+                            const Icon(
+                              AntIcons.star_outline,
+                              size: 12,
+                              color: Colors.amber,
+                            ),
+                            const Icon(
+                              AntIcons.star_outline,
+                              size: 12,
+                              color: Colors.amber,
+                            ),
+                            const SizedBox(width: 4),
                             Text(
                               "(" + Random().nextInt(100).toString() + ")",
                               style: const TextStyle(
-                                color: Colors.grey,
+                                color: Colors.white70,
                               ),
                             )
                           ],
                         )
                       ],
                     ),
-                    trailing: Icon(
+                    trailing: const Icon(
                       AntIcons.right_outline,
                       size: 16,
+                      color: Colors.white70,
                     ),
                   ),
                 );
@@ -89,10 +115,12 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.to(WysiwygPage());
+          Get.to(const WysiwygPage());
         },
-        backgroundColor: Color(0xFFFECA57),
-        child: const Icon(CupertinoIcons.add),
+        backgroundColor: Colors.amber,
+        child: const Icon(
+          CupertinoIcons.add,
+        ),
       ),
       bottomNavigationBar: Obx(
         () => BottomNavigationBar(
@@ -114,14 +142,14 @@ class HomePage extends StatelessWidget {
             ),
           ],
           currentIndex: _selectedIndex.value,
-          selectedItemColor: Color(0xFF3CC890),
+          selectedItemColor: const Color(0xFF3CC890),
           unselectedItemColor: Colors.white70,
           backgroundColor: const Color(0xFF161725),
           onTap: _onItemTapped,
-          selectedLabelStyle: TextStyle(
+          selectedLabelStyle: const TextStyle(
             fontWeight: FontWeight.bold,
           ),
-          unselectedLabelStyle: TextStyle(
+          unselectedLabelStyle: const TextStyle(
             fontWeight: FontWeight.bold,
           ),
           type: BottomNavigationBarType.fixed,
@@ -130,7 +158,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  var _selectedIndex = 0.obs;
+  final _selectedIndex = 0.obs;
 
   void _onItemTapped(int index) {
     _selectedIndex.value = index;

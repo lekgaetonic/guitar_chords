@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class WysiwygPage extends StatelessWidget {
-  WysiwygPage({Key? key}) : super(key: key);
+  const WysiwygPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +10,6 @@ class WysiwygPage extends StatelessWidget {
           centerTitle: true,
           title: const Text('Add new chord'),
         ),
-      body: Container()
-    );
+        body: Container());
   }
 }

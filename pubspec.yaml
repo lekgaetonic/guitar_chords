@@ -37,6 +37,7 @@ dependencies:
   html: ^0.15.0
   flutter_widget_from_html_core: ^0.8.5+1
   ant_icons: ^2.0.0-nullsafety.0
+  iconsax: ^0.0.8
 
 dev_dependencies:
   flutter_test:
@@ -85,4 +86,4 @@ flutter:
         - asset: fonts/SukhumvitSet-Light.ttf
     - family: PaletteMosaic
       fonts:
-       - asset: fonts/PaletteMosaic-Regular.ttf
+        - asset: fonts/PaletteMosaic-Regular.ttf

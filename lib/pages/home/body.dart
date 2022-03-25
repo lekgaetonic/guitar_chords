@@ -195,7 +195,7 @@ class HomeBody extends StatelessWidget {
           height: 48,
           child: ListView(
             scrollDirection: Axis.horizontal,
-            children: [],
+            children: [Container()],
           ),
         ),
         Padding(

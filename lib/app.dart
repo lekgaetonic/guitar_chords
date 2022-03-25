@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:guitar_chords/pages/home/page.dart';
+
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
 
@@ -14,7 +15,7 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Sukhumvit',
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }

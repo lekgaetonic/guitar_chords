@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ant_icons/ant_icons.dart';
 import 'package:get/get.dart';
 import 'package:guitar_chords/pages/search/page.dart';
 import 'package:iconsax/iconsax.dart';

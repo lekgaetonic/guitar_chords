@@ -192,10 +192,37 @@ class HomeBody extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 48,
+          height: 80,
           child: ListView(
             scrollDirection: Axis.horizontal,
-            children: [Container()],
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  color: Colors.blue,
+                  // padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
+                  width: 200,
+                  child: const ListTile(
+                    leading: Icon(Icons.album, size: 45),
+                    title: Text('งมงาย'),
+                    subtitle: Text('Body Slam'),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  color: Colors.blue,
+                  // padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
+                  width: 200,
+                  child: const ListTile(
+                    leading: Icon(Icons.album, size: 45),
+                    title: Text('งมงาย'),
+                    subtitle: Text('Body Slam'),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
         Padding(

@@ -10,7 +10,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'chord kub',
+      title: 'Deedzify',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'Sukhumvit',

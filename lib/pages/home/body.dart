@@ -83,7 +83,6 @@ class HomeBody extends StatelessWidget {
               Column(
                 children: [
                   Container(
-                    // color: Colors.blue,
                     padding:
                         const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                     width: 80,
@@ -196,29 +195,91 @@ class HomeBody extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  color: Colors.blue,
-                  // padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
-                  width: 200,
-                  child: const ListTile(
-                    leading: Icon(Icons.album, size: 45),
-                    title: Text('งมงาย'),
-                    subtitle: Text('Body Slam'),
+              SizedBox(
+                width: 200,
+                child: ListTile(
+                  leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.network(
+                        'https://s.isanook.com/jo/0/ui/484/2423305/dc6b8c0fd87d042da1c9432b4599cb20_1597220739.jpg'),
+                  ),
+                  title: const Text(
+                    'งมงาย',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  subtitle: const Text(
+                    'Body Slam',
+                    style: TextStyle(
+                      color: Colors.white70,
+                    ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  color: Colors.blue,
-                  // padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
-                  width: 200,
-                  child: const ListTile(
-                    leading: Icon(Icons.album, size: 45),
-                    title: Text('งมงาย'),
-                    subtitle: Text('Body Slam'),
+              SizedBox(
+                width: 200,
+                child: ListTile(
+                  leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.network(
+                        'https://musicstation.kapook.com/files_music2008/picture/0/3453.jpg'),
+                  ),
+                  title: const Text(
+                    'รักแท้ดูแลไม้ได้',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  subtitle: const Text(
+                    'Potato',
+                    style: TextStyle(
+                      color: Colors.white70,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 200,
+                child: ListTile(
+                  leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.network(
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-Bsxgr5gnAj-LAPcowmLLNx2BhIZpHvyxg&usqp=CAU'),
+                  ),
+                  title: const Text(
+                    'ถามจันทร์',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  subtitle: const Text(
+                    '25 Hours',
+                    style: TextStyle(
+                      color: Colors.white70,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 200,
+                child: ListTile(
+                  leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.network(
+                        'https://s.isanook.com/jo/0/rp/r/w700/ya0xa0m1w0/aHR0cDovL2ltYWdlLmpvb3guY29tL0pPT1hjb3Zlci8wLzgxMDMwNTc3NDQwYjg0ZjQvMTAwMC5qcGc=.jpg'),
+                  ),
+                  title: const Text(
+                    'เจ้าหญิงนิทรา',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  subtitle: const Text(
+                    'Clash',
+                    style: TextStyle(
+                      color: Colors.white70,
+                    ),
                   ),
                 ),
               ),

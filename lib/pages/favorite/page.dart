@@ -2,15 +2,12 @@ import 'package:ant_icons/ant_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:guitar_chords/pages/favorite/page.dart';
-import 'package:guitar_chords/pages/home/appbar.dart';
-import 'package:guitar_chords/pages/home/body.dart';
-import 'package:guitar_chords/pages/search/appbar.dart';
-import 'package:guitar_chords/pages/search/body.dart';
+import 'package:guitar_chords/pages/favorite/appbar.dart';
+import 'package:guitar_chords/pages/favorite/body.dart';
 import 'package:guitar_chords/pages/wysiwyg/page.dart';
 
-class SearchPage extends StatelessWidget {
-  SearchPage({Key? key}) : super(key: key);
+class FavoritePage extends StatelessWidget {
+  FavoritePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +15,9 @@ class SearchPage extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 40, 42, 66),
       appBar: const PreferredSize(
         preferredSize: Size(double.infinity, kToolbarHeight),
-        child: SearchAppBar(),
+        child: FavoriteAppBar(),
       ),
-      body: const SearchBody(),
+      body: const FavoriteBody(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Get.to(const WysiwygPage());
@@ -70,6 +67,5 @@ class SearchPage extends StatelessWidget {
 
   void _onItemTapped(int index) {
     _selectedIndex.value = index;
-    Get.to(FavoritePage());
   }
 }

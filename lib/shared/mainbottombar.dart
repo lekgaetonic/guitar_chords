@@ -1,6 +1,8 @@
 import 'package:ant_icons/ant_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:guitar_chords/pages/favorite/page.dart';
+import 'package:guitar_chords/pages/home/page.dart';
 
 class MainBottomBar extends StatelessWidget {
   MainBottomBar({Key? key}) : super(key: key);
@@ -46,5 +48,18 @@ class MainBottomBar extends StatelessWidget {
 
   void _onItemTapped(int index) {
     _selectedIndex.value = index;
+    switch (index) {
+      case 0:
+        Get.to(const HomePage());
+        break;
+      case 1:
+        Get.to(FavoritePage());
+        break;
+      case 2:
+        Get.to(FavoritePage());
+        break;
+      default:
+        Get.to(const HomePage());
+    }
   }
 }

@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
         onPressed: () {
           Get.to(const WysiwygPage());
         },
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.grey[700],
         child: const Icon(
           CupertinoIcons.add,
         ),

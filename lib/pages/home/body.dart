@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -44,7 +45,7 @@ class HomeBody extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(4.0),
+                  padding: const EdgeInsets.only(left: 8.0, bottom: 8),
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
@@ -54,8 +55,19 @@ class HomeBody extends StatelessWidget {
                     child: ListTile(
                       leading: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
-                        child: Image.network(
-                            'https://s.isanook.com/jo/0/ui/484/2423305/dc6b8c0fd87d042da1c9432b4599cb20_1597220739.jpg'),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://s.isanook.com/jo/0/ui/484/2423305/dc6b8c0fd87d042da1c9432b4599cb20_1597220739.jpg',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
+                        // Image.network(
+                        //   'https://s.isanook.com/jo/0/ui/484/2423305/dc6b8c0fd87d042da1c9432b4599cb20_1597220739.jpg',
+                        // ),
                       ),
                       title: const Text(
                         'งมงาย',
@@ -73,7 +85,7 @@ class HomeBody extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(4.0),
+                  padding: const EdgeInsets.only(left: 8.0, bottom: 8),
                   child: Container(
                     width: 200,
                     decoration: BoxDecoration(
@@ -83,8 +95,16 @@ class HomeBody extends StatelessWidget {
                     child: ListTile(
                       leading: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
-                        child: Image.network(
-                            'https://musicstation.kapook.com/files_music2008/picture/0/3453.jpg'),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://musicstation.kapook.com/files_music2008/picture/0/3453.jpg',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
                       ),
                       title: const Text(
                         'รักแท้ดูแลไม้ได้',
@@ -102,7 +122,7 @@ class HomeBody extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(4.0),
+                  padding: const EdgeInsets.only(left: 8.0, bottom: 8),
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
@@ -112,8 +132,16 @@ class HomeBody extends StatelessWidget {
                     child: ListTile(
                       leading: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
-                        child: Image.network(
-                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-Bsxgr5gnAj-LAPcowmLLNx2BhIZpHvyxg&usqp=CAU'),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-Bsxgr5gnAj-LAPcowmLLNx2BhIZpHvyxg&usqp=CAU',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
                       ),
                       title: const Text(
                         'ถามจันทร์',
@@ -131,7 +159,7 @@ class HomeBody extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(4.0),
+                  padding: const EdgeInsets.only(left: 8.0, bottom: 8),
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
@@ -141,8 +169,16 @@ class HomeBody extends StatelessWidget {
                     child: ListTile(
                       leading: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
-                        child: Image.network(
-                            'https://s.isanook.com/jo/0/rp/r/w700/ya0xa0m1w0/aHR0cDovL2ltYWdlLmpvb3guY29tL0pPT1hjb3Zlci8wLzgxMDMwNTc3NDQwYjg0ZjQvMTAwMC5qcGc=.jpg'),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://s.isanook.com/jo/0/rp/r/w700/ya0xa0m1w0/aHR0cDovL2ltYWdlLmpvb3guY29tL0pPT1hjb3Zlci8wLzgxMDMwNTc3NDQwYjg0ZjQvMTAwMC5qcGc=.jpg',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
                       ),
                       title: const Text(
                         'เจ้าหญิงนิทรา',
@@ -202,9 +238,18 @@ class HomeBody extends StatelessWidget {
                           const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                       width: 80,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.network(
-                              'https://musicstation.kapook.com/files_music2008/picture/0/3453.jpg')),
+                        borderRadius: BorderRadius.circular(8),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://musicstation.kapook.com/files_music2008/picture/0/3453.jpg',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
+                      ),
                     ),
                     const Text(
                       'Potato',
@@ -222,9 +267,18 @@ class HomeBody extends StatelessWidget {
                           const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                       width: 80,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.network(
-                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-Bsxgr5gnAj-LAPcowmLLNx2BhIZpHvyxg&usqp=CAU')),
+                        borderRadius: BorderRadius.circular(8),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-Bsxgr5gnAj-LAPcowmLLNx2BhIZpHvyxg&usqp=CAU',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
+                      ),
                     ),
                     const Text(
                       '25 Hours',
@@ -242,9 +296,18 @@ class HomeBody extends StatelessWidget {
                           const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                       width: 80,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.network(
-                              'https://s.isanook.com/jo/0/rp/r/w700/ya0xa0m1w0/aHR0cDovL2ltYWdlLmpvb3guY29tL0pPT1hjb3Zlci8wLzgxMDMwNTc3NDQwYjg0ZjQvMTAwMC5qcGc=.jpg')),
+                        borderRadius: BorderRadius.circular(8),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://s.isanook.com/jo/0/rp/r/w700/ya0xa0m1w0/aHR0cDovL2ltYWdlLmpvb3guY29tL0pPT1hjb3Zlci8wLzgxMDMwNTc3NDQwYjg0ZjQvMTAwMC5qcGc=.jpg',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
+                      ),
                     ),
                     const Text(
                       'Clash',
@@ -262,9 +325,18 @@ class HomeBody extends StatelessWidget {
                           const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                       width: 80,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.network(
-                              'https://s.isanook.com/jo/0/ui/484/2423305/dc6b8c0fd87d042da1c9432b4599cb20_1597220739.jpg')),
+                        borderRadius: BorderRadius.circular(8),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://s.isanook.com/jo/0/ui/484/2423305/dc6b8c0fd87d042da1c9432b4599cb20_1597220739.jpg',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
+                      ),
                     ),
                     const Text(
                       'Body Slam',
@@ -282,9 +354,18 @@ class HomeBody extends StatelessWidget {
                           const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                       width: 80,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.network(
-                              'https://is4-ssl.mzstatic.com/image/thumb/Music/v4/1d/01/27/1d0127cf-1233-3f43-337b-f77f1dcffc55/2294.jpg/400x400bb.jpg')),
+                        borderRadius: BorderRadius.circular(8),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://is4-ssl.mzstatic.com/image/thumb/Music/v4/1d/01/27/1d0127cf-1233-3f43-337b-f77f1dcffc55/2294.jpg/400x400bb.jpg',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
+                      ),
                     ),
                     const Text(
                       'Silly Fools',
@@ -302,9 +383,18 @@ class HomeBody extends StatelessWidget {
                           const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                       width: 80,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.network(
-                              'https://upload.wikimedia.org/wikipedia/th/2/2e/%E0%B8%9B%E0%B8%81%E0%B8%AD%E0%B8%B1%E0%B8%A5%E0%B8%9A%E0%B8%B1%E0%B9%89%E0%B8%A1-Seven-BigAss.jpg')),
+                        borderRadius: BorderRadius.circular(8),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://upload.wikimedia.org/wikipedia/th/2/2e/%E0%B8%9B%E0%B8%81%E0%B8%AD%E0%B8%B1%E0%B8%A5%E0%B8%9A%E0%B8%B1%E0%B9%89%E0%B8%A1-Seven-BigAss.jpg',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
+                      ),
                     ),
                     const Text(
                       'Big Ass',
@@ -357,9 +447,18 @@ class HomeBody extends StatelessWidget {
                           const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                       width: 80,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.network(
-                              'https://musicstation.kapook.com/files_music2008/picture/0/3453.jpg')),
+                        borderRadius: BorderRadius.circular(8),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://musicstation.kapook.com/files_music2008/picture/0/3453.jpg',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
+                      ),
                     ),
                     const Text(
                       'Potato',
@@ -377,9 +476,18 @@ class HomeBody extends StatelessWidget {
                           const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                       width: 80,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.network(
-                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-Bsxgr5gnAj-LAPcowmLLNx2BhIZpHvyxg&usqp=CAU')),
+                        borderRadius: BorderRadius.circular(8),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-Bsxgr5gnAj-LAPcowmLLNx2BhIZpHvyxg&usqp=CAU',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
+                      ),
                     ),
                     const Text(
                       '25 Hours',
@@ -392,13 +500,23 @@ class HomeBody extends StatelessWidget {
                 Column(
                   children: [
                     Container(
+                      // color: Colors.blue,
                       padding:
                           const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                       width: 80,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.network(
-                              'https://s.isanook.com/jo/0/rp/r/w700/ya0xa0m1w0/aHR0cDovL2ltYWdlLmpvb3guY29tL0pPT1hjb3Zlci8wLzgxMDMwNTc3NDQwYjg0ZjQvMTAwMC5qcGc=.jpg')),
+                        borderRadius: BorderRadius.circular(8),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://s.isanook.com/jo/0/rp/r/w700/ya0xa0m1w0/aHR0cDovL2ltYWdlLmpvb3guY29tL0pPT1hjb3Zlci8wLzgxMDMwNTc3NDQwYjg0ZjQvMTAwMC5qcGc=.jpg',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
+                      ),
                     ),
                     const Text(
                       'Clash',
@@ -416,9 +534,18 @@ class HomeBody extends StatelessWidget {
                           const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                       width: 80,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.network(
-                              'https://s.isanook.com/jo/0/ui/484/2423305/dc6b8c0fd87d042da1c9432b4599cb20_1597220739.jpg')),
+                        borderRadius: BorderRadius.circular(8),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://s.isanook.com/jo/0/ui/484/2423305/dc6b8c0fd87d042da1c9432b4599cb20_1597220739.jpg',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
+                      ),
                     ),
                     const Text(
                       'Body Slam',
@@ -436,9 +563,18 @@ class HomeBody extends StatelessWidget {
                           const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                       width: 80,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.network(
-                              'https://is4-ssl.mzstatic.com/image/thumb/Music/v4/1d/01/27/1d0127cf-1233-3f43-337b-f77f1dcffc55/2294.jpg/400x400bb.jpg')),
+                        borderRadius: BorderRadius.circular(8),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://is4-ssl.mzstatic.com/image/thumb/Music/v4/1d/01/27/1d0127cf-1233-3f43-337b-f77f1dcffc55/2294.jpg/400x400bb.jpg',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
+                      ),
                     ),
                     const Text(
                       'Silly Fools',
@@ -456,9 +592,18 @@ class HomeBody extends StatelessWidget {
                           const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                       width: 80,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.network(
-                              'https://upload.wikimedia.org/wikipedia/th/2/2e/%E0%B8%9B%E0%B8%81%E0%B8%AD%E0%B8%B1%E0%B8%A5%E0%B8%9A%E0%B8%B1%E0%B9%89%E0%B8%A1-Seven-BigAss.jpg')),
+                        borderRadius: BorderRadius.circular(8),
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              'https://upload.wikimedia.org/wikipedia/th/2/2e/%E0%B8%9B%E0%B8%81%E0%B8%AD%E0%B8%B1%E0%B8%A5%E0%B8%9A%E0%B8%B1%E0%B9%89%E0%B8%A1-Seven-BigAss.jpg',
+                          placeholder: (context, url) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                          errorWidget: (context, url, error) => Image.asset(
+                            'assets/images/watermark.png',
+                          ),
+                        ),
+                      ),
                     ),
                     const Text(
                       'Big Ass',

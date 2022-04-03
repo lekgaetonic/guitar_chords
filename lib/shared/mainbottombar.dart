@@ -5,7 +5,9 @@ import 'package:guitar_chords/pages/favorite/page.dart';
 import 'package:guitar_chords/pages/home/page.dart';
 
 class MainBottomBar extends StatelessWidget {
-  MainBottomBar({Key? key}) : super(key: key);
+  MainBottomBar({
+    Key? key,
+  }) : super(key: key);
 
   final _selectedIndex = 0.obs;
 
@@ -31,9 +33,9 @@ class MainBottomBar extends StatelessWidget {
           ),
         ],
         currentIndex: _selectedIndex.value,
-        selectedItemColor: const Color(0xFF3CC890),
-        unselectedItemColor: Colors.white70,
-        backgroundColor: const Color(0xFF161725),
+        selectedItemColor: const Color(0xFFE81E62),
+        unselectedItemColor: Colors.black54,
+        // backgroundColor: const Color(0xFFFFFFFF),
         onTap: _onItemTapped,
         selectedLabelStyle: const TextStyle(
           fontWeight: FontWeight.bold,

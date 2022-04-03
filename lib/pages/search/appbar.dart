@@ -6,8 +6,9 @@ class SearchAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: const Color(0xFF161725),
+      // backgroundColor: const Color(0xFF161725),
       // centerTitle: true,
+      elevation: 0,
       title: TextFormField(
         // style: TextStyle(color: Colors.white),
         decoration: InputDecoration(

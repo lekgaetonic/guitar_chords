@@ -9,14 +9,16 @@ class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: const Color(0xFF161725),
+      backgroundColor: Colors.white10,
+      elevation: 0,
       centerTitle: true,
       title: const Text(
         'Deedzify',
         style: TextStyle(
           fontFamily: 'PaletteMosaic',
           fontSize: 26,
-          color: Color(0xFF3CC890),
+          // color: Color(0xFFE81E62),
+          color: Colors.pinkAccent,
         ),
       ),
       actions: [
@@ -28,6 +30,7 @@ class HomeAppBar extends StatelessWidget {
           },
           icon: const Icon(
             Iconsax.search_normal_1,
+            color: Colors.black54,
           ),
         )
       ],

@@ -20,9 +20,11 @@ class HomePage extends StatelessWidget {
       body: const HomeBody(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.to(WysiwygPage());
+          Get.to(
+            WysiwygPage(),
+          );
         },
-        backgroundColor: Colors.white30,
+        backgroundColor: Colors.pinkAccent,
         child: const Icon(
           CupertinoIcons.add,
         ),

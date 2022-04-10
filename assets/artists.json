@@ -1,0 +1,54 @@
+{
+    "artists": [
+        {
+            "id": 1,
+            "artist": "Potato",
+            "cover": "https://musicstation.kapook.com/files_music2008/picture/0/3453.jpg"
+        },
+        {
+            "id": 2,
+            "artist": "25 Hours",
+            "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-Bsxgr5gnAj-LAPcowmLLNx2BhIZpHvyxg&usqp=CAU"
+        },
+        {
+            "id": 3,
+            "artist": "Two",
+            "cover": "https://s.isanook.com/jo/0/rp/r/w300/ya0xa0m1w0/aHR0cDovL2ltZ2NhY2hlLmpvb3guY29tL211c2ljL2pvb3gvcGhvdG8vbWlkX2FsYnVtXzY0MC8wLzYvOGNmYmNjYmVjM2I5ZjAwNi5qcGc=.jpg"
+        },
+        {
+            "id": 4,
+            "artist": "นากา",
+            "cover": "https://s.isanook.com/jo/0/rp/r/w300/ya0xa0m1w0/aHR0cDovL2ltYWdlLmpvb3guY29tL0pPT1hjb3Zlci8wL2MwNmQ5YWY1NzRhOTI1ODMvMTAwMC5qcGc=.jpg"
+        },
+        {
+            "id": 5,
+            "artist": "ใจนักเลง",
+            "cover": "https://2.bp.blogspot.com/-LW7KeaR4HDk/VskagTvM9oI/AAAAAAAAGyg/upRURMDWXdI/s1600/%25E0%25B8%259E%25E0%25B8%2587%25E0%25B8%25A9%25E0%25B9%258C%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2592%25E0%25B8%2599%25E0%25B9%258C%2B%25E0%25B8%25A7%25E0%25B8%258A%25E0%25B8%25B4%25E0%25B8%25A3%25E0%25B8%259A%25E0%25B8%25A3%25E0%25B8%25A3%25E0%25B8%2588%25E0%25B8%2587%2B%25E0%25B8%25AD%25E0%25B8%25B1%25E0%25B8%25A5%25E0%25B8%259A%25E0%25B8%25B1%25E0%25B9%2589%25E0%25B8%25A1%2B%25E0%25B8%259E%25E0%25B8%2587%25E0%25B8%25A9%25E0%25B9%258C%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2592%25E0%25B8%2599%25E0%25B9%258C%2B%25E0%25B8%25A0%25E0%25B8%25B2%25E0%25B8%2584%2B3%2B2535.jpg"
+        },
+        {
+            "id": 6,
+            "artist": "Pause",
+            "cover": "http://1.bp.blogspot.com/_JB0tU62ByLs/SjhD3xErGgI/AAAAAAAABWI/3un-XGhyQLM/w1200-h630-p-k-no-nu/1839_1224349879.jpg"
+        },
+        {
+            "id": 7,
+            "artist": "Silly Fools",
+            "cover": "https://is4-ssl.mzstatic.com/image/thumb/Music/v4/1d/01/27/1d0127cf-1233-3f43-337b-f77f1dcffc55/2294.jpg/400x400bb.jpg"
+        },
+        {
+            "id": 8,
+            "artist": "Body Slam",
+            "cover": "https://s.isanook.com/jo/0/ui/484/2423305/dc6b8c0fd87d042da1c9432b4599cb20_1597220739.jpg"
+        },
+        {
+            "id": 8,
+            "artist": "Clash",
+            "cover": "https://s.isanook.com/jo/0/rp/r/w700/ya0xa0m1w0/aHR0cDovL2ltYWdlLmpvb3guY29tL0pPT1hjb3Zlci8wLzgxMDMwNTc3NDQwYjg0ZjQvMTAwMC5qcGc=.jpg"
+        },
+        {
+            "id": 9,
+            "artist": "Big Ass",
+            "cover": "https://upload.wikimedia.org/wikipedia/th/2/2e/%E0%B8%9B%E0%B8%81%E0%B8%AD%E0%B8%B1%E0%B8%A5%E0%B8%9A%E0%B8%B1%E0%B9%89%E0%B8%A1-Seven-BigAss.jpg"
+        }
+    ]
+}

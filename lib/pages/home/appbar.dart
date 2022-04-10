@@ -30,7 +30,7 @@ class HomeAppBar extends StatelessWidget {
           },
           icon: const Icon(
             Iconsax.search_normal_1,
-            color: Colors.white70,
+            color: Colors.white,
           ),
         )
       ],

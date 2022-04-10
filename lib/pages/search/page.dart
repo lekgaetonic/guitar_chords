@@ -16,7 +16,7 @@ class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: const Color.fromARGB(255, 40, 42, 66),
+      backgroundColor: const Color(0xFF202134),
       appBar: const PreferredSize(
         preferredSize: Size(double.infinity, kToolbarHeight),
         child: SearchAppBar(),
@@ -26,7 +26,7 @@ class SearchPage extends StatelessWidget {
         onPressed: () {
           Get.to(WysiwygPage());
         },
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.pinkAccent,
         child: const Icon(
           CupertinoIcons.add,
         ),

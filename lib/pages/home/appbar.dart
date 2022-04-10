@@ -9,7 +9,7 @@ class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.white10,
+      backgroundColor: const Color(0xFF161725),
       elevation: 0,
       centerTitle: true,
       title: const Text(
@@ -30,7 +30,7 @@ class HomeAppBar extends StatelessWidget {
           },
           icon: const Icon(
             Iconsax.search_normal_1,
-            color: Colors.black54,
+            color: Colors.white70,
           ),
         )
       ],

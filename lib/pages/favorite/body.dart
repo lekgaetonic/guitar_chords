@@ -27,7 +27,7 @@ class FavoriteBody extends StatelessWidget {
                 elevation: 3,
                 child: ListTile(
                   dense: true,
-                  onTap: () => Get.to(const LyricPage()),
+                  onTap: () => Get.to(LyricPage(0)),
                   leading: ClipRRect(
                       borderRadius: BorderRadius.circular(3.0),
                       child: Image.network(songs['songs'][index]['cover'])),

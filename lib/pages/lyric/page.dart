@@ -2,9 +2,14 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
+import 'package:guitar_chords/pages/lyric/body.dart';
+import 'package:iconsax/iconsax.dart';
 
 class LyricPage extends StatelessWidget {
-  const LyricPage({Key? key}) : super(key: key);
+  late int _songId;
+  LyricPage(songId, {Key? key}) : super(key: key) {
+    _songId = songId;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +18,7 @@ class LyricPage extends StatelessWidget {
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasData) {
           var songs = json.decode(snapshot.data);
-          var song = songs["songs"][0];
+          var song = songs["songs"][_songId];
           return Scaffold(
             backgroundColor: const Color(0xFF202134),
             appBar: AppBar(
@@ -32,13 +37,14 @@ class LyricPage extends StatelessWidget {
                   ),
                 ],
               ),
+              actions: const [
+                IconButton(
+                  onPressed: null,
+                  icon: Icon(Iconsax.edit),
+                )
+              ],
             ),
-            body: SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: HtmlWidget(song["lyric"]),
-              ),
-            ),
+            body: const LyricBody(),
           );
         } else {
           return const Center(

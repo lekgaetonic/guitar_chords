@@ -20,7 +20,7 @@ class FavoritePage extends StatelessWidget {
       body: const FavoriteBody(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.to(const WysiwygPage());
+          Get.to(WysiwygPage());
         },
         backgroundColor: Colors.amber,
         child: const Icon(

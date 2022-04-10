@@ -24,7 +24,7 @@ class SearchPage extends StatelessWidget {
       body: const SearchBody(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.to(const WysiwygPage());
+          Get.to(WysiwygPage());
         },
         backgroundColor: Colors.amber,
         child: const Icon(

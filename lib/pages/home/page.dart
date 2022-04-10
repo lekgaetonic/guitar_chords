@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: const Color.fromARGB(255, 40, 42, 66),
+      backgroundColor: const Color(0xFF202134),
       appBar: const PreferredSize(
         preferredSize: Size(double.infinity, kToolbarHeight),
         child: HomeAppBar(),
@@ -20,9 +20,9 @@ class HomePage extends StatelessWidget {
       body: const HomeBody(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.to(const WysiwygPage());
+          Get.to(WysiwygPage());
         },
-        backgroundColor: Colors.grey[700],
+        backgroundColor: Colors.white30,
         child: const Icon(
           CupertinoIcons.add,
         ),

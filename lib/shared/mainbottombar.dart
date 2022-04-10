@@ -34,8 +34,8 @@ class MainBottomBar extends StatelessWidget {
         ],
         currentIndex: _selectedIndex.value,
         selectedItemColor: Colors.pinkAccent,
-        unselectedItemColor: Colors.black54,
-        // backgroundColor: const Color(0xFFFFFFFF),
+        unselectedItemColor: Colors.white70,
+        backgroundColor: const Color(0xFF161725),
         onTap: _onItemTapped,
         selectedLabelStyle: const TextStyle(
           fontWeight: FontWeight.bold,

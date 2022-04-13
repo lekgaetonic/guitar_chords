@@ -9,9 +9,8 @@ class SeeAll extends StatelessWidget {
       child: Text(
         'See all',
         style: TextStyle(
-          fontWeight: FontWeight.bold,
           fontSize: 14,
-          color: Colors.white38,
+          color: Colors.white70,
         ),
         textAlign: TextAlign.end,
       ),

@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
             WysiwygPage(),
           );
         },
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: const Color(0xFF202134),
         child: const Icon(
           CupertinoIcons.add,
         ),

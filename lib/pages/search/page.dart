@@ -24,9 +24,11 @@ class SearchPage extends StatelessWidget {
       body: const SearchBody(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.to(WysiwygPage());
+          Get.to(
+            WysiwygPage(),
+          );
         },
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: const Color(0xFF202134),
         child: const Icon(
           CupertinoIcons.add,
         ),

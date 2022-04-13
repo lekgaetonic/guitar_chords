@@ -74,6 +74,7 @@ flutter:
   assets:
     - assets/artists.json
     - assets/songs.json
+    - assets/lyrics.json
     - assets/images/watermark.png
     - assets/html/
   #   - images/a_dot_ham.jpeg

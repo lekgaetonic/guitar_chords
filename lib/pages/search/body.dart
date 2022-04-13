@@ -20,12 +20,10 @@ class SearchBody extends StatelessWidget {
           return ListView.builder(
             itemCount: songLength,
             itemBuilder: (BuildContext context, int index) {
-              return Card(
-                color: const Color(0xFF161725),
-                margin:
-                    const EdgeInsets.only(left: 8, top: 8, right: 8, bottom: 0),
-                elevation: 3,
+              return Padding(
+                padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 8.0),
                 child: ListTile(
+                  tileColor: const Color(0xFF161725),
                   dense: true,
                   onTap: () => Get.to(LyricPage(1)),
                   leading: ClipRRect(
@@ -103,6 +101,6 @@ class SearchBody extends StatelessWidget {
   }
 
   Future<String> readJson() async {
-    return await rootBundle.loadString('assets/songs.json');
+    return await rootBundle.loadString('assets/lyrics.json');
   }
 }

@@ -13,7 +13,7 @@ class SearchAppBar extends StatelessWidget {
         // style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
           filled: true,
-          fillColor: Colors.white10,
+          fillColor: const Color(0xFF202134),
           isDense: true,
           contentPadding:
               const EdgeInsets.only(left: 14.0, bottom: 8.0, top: 8.0),

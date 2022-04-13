@@ -1,12 +1,8 @@
 import 'dart:convert';
-
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
-import 'package:guitar_chords/pages/lyric/page.dart';
 import 'package:guitar_chords/shared/artist_box.dart';
-import 'package:guitar_chords/shared/box_header.dart';
+import 'package:guitar_chords/shared/topic_box.dart';
 import 'package:guitar_chords/shared/recently_box.dart';
 
 class HomeBody extends StatelessWidget {
@@ -31,14 +27,15 @@ class HomeBody extends StatelessWidget {
                 if (songLength > 0) {
                   return Column(
                     children: [
-                      BoxHeader('Recently Songs'),
+                      TopicBox('Recently Songs', viewMore: false),
                       SizedBox(
-                        height: 80,
+                        height: 70,
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           itemCount: songLength,
                           itemBuilder: (BuildContext context, int index) {
                             return RecentlyBox(
+                              songs['songs'][index]['id'],
                               songs['songs'][index]['cover'],
                               songs['songs'][index]['name'],
                               songs['songs'][index]['artist'],
@@ -56,7 +53,7 @@ class HomeBody extends StatelessWidget {
               }
             },
           ),
-          BoxHeader('Songs'),
+          TopicBox('Songs'),
           SizedBox(
             height: 110,
             child: FutureBuilder(
@@ -78,7 +75,7 @@ class HomeBody extends StatelessWidget {
               },
             ),
           ),
-          BoxHeader('Artists'),
+          TopicBox('Artists'),
           SizedBox(
             height: 110,
             child: FutureBuilder(
@@ -100,7 +97,7 @@ class HomeBody extends StatelessWidget {
               },
             ),
           ),
-          BoxHeader('Artists'),
+          TopicBox('Artists'),
           SizedBox(
             height: 110,
             child: FutureBuilder(
@@ -122,7 +119,7 @@ class HomeBody extends StatelessWidget {
               },
             ),
           ),
-          BoxHeader('Artists'),
+          TopicBox('Artists'),
           SizedBox(
             height: 110,
             child: FutureBuilder(
@@ -144,7 +141,7 @@ class HomeBody extends StatelessWidget {
               },
             ),
           ),
-          BoxHeader('Songs'),
+          TopicBox('Songs'),
           SizedBox(
             height: 110,
             child: FutureBuilder(

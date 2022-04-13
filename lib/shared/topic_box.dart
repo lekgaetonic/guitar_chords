@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:guitar_chords/shared/see_all.dart';
 
-class BoxHeader extends StatelessWidget {
-  late String _header;
-  BoxHeader(String header, {Key? key}) : super(key: key) {
-    _header = header;
-  }
+class TopicBox extends StatelessWidget {
+  late String topicText;
+  late bool viewMore;
+  TopicBox(this.topicText, {this.viewMore = true, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +14,7 @@ class BoxHeader extends StatelessWidget {
         children: [
           Expanded(
             child: Text(
-              _header,
+              topicText,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
@@ -23,7 +22,7 @@ class BoxHeader extends StatelessWidget {
               ),
             ),
           ),
-          const SeeAll(),
+          viewMore ? const SeeAll() : const SizedBox.shrink(),
         ],
       ),
     );

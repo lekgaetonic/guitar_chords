@@ -5,19 +5,17 @@ import 'package:guitar_chords/pages/lyric/body.dart';
 import 'package:iconsax/iconsax.dart';
 
 class LyricPage extends StatelessWidget {
-  late int _songId;
-  LyricPage(songId, {Key? key}) : super(key: key) {
-    _songId = songId;
-  }
+  final int _id;
+  const LyricPage(this._id, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: readJson(),
+      future: loadLyric(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasData) {
           var songs = json.decode(snapshot.data);
-          var song = songs["songs"][_songId];
+          var song = songs["songs"][_id];
           return Scaffold(
             backgroundColor: const Color(0xFF202134),
             appBar: AppBar(
@@ -54,7 +52,7 @@ class LyricPage extends StatelessWidget {
     );
   }
 
-  Future<String> readJson() async {
-    return await rootBundle.loadString('assets/songs.json');
+  Future<String> loadLyric() async {
+    return await rootBundle.loadString('assets/lyrics.json');
   }
 }

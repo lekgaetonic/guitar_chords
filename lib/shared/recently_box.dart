@@ -4,10 +4,12 @@ import 'package:get/get.dart';
 import 'package:guitar_chords/pages/lyric/page.dart';
 
 class RecentlyBox extends StatelessWidget {
+  final int _id;
   final String _imageUrl;
   final String _song;
   final String _artist;
-  const RecentlyBox(this._imageUrl, this._song, this._artist, {Key? key})
+  const RecentlyBox(this._id, this._imageUrl, this._song, this._artist,
+      {Key? key})
       : super(key: key);
 
   @override
@@ -15,7 +17,7 @@ class RecentlyBox extends StatelessWidget {
     return SizedBox(
       width: 200,
       child: ListTile(
-        onTap: (() => Get.to(LyricPage(16))),
+        onTap: (() => Get.to(LyricPage(_id))),
         leading: ClipRRect(
           borderRadius: BorderRadius.circular(8),
           child: CachedNetworkImage(

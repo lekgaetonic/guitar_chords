@@ -10,7 +10,7 @@ class HomeAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: const Color(0xFF161725),
-      elevation: 0,
+      // elevation: 0,
       centerTitle: true,
       title: const Text(
         'Deedzify',

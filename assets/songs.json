@@ -14,43 +14,25 @@
         },
         {
             "id": 3,
-            "name": "ภาษากาย",
-            "artist": "Potato",
-            "cover": "https://musicstation.kapook.com/files_music2008/picture/0/3453.jpg"
-        },
-        {
-            "id": 4,
             "name": "เธอไม่เคยตาย",
             "artist": "Two",
             "cover": "https://s.isanook.com/jo/0/rp/r/w300/ya0xa0m1w0/aHR0cDovL2ltZ2NhY2hlLmpvb3guY29tL211c2ljL2pvb3gvcGhvdG8vbWlkX2FsYnVtXzY0MC8wLzYvOGNmYmNjYmVjM2I5ZjAwNi5qcGc=.jpg"
         },
         {
-            "id": 5,
+            "id": 4,
             "name": "คิดถึงเธอ",
             "artist": "นากา",
             "cover": "https://s.isanook.com/jo/0/rp/r/w300/ya0xa0m1w0/aHR0cDovL2ltYWdlLmpvb3guY29tL0pPT1hjb3Zlci8wL2MwNmQ5YWY1NzRhOTI1ODMvMTAwMC5qcGc=.jpg"
         },
         {
-            "id": 6,
-            "name": "ถามจันทร์",
-            "artist": "25 Hours",
-            "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-Bsxgr5gnAj-LAPcowmLLNx2BhIZpHvyxg&usqp=CAU"
-        },
-        {
-            "id": 7,
-            "name": "ภาษากาย",
-            "artist": "Potato",
-            "cover": "https://musicstation.kapook.com/files_music2008/picture/0/3453.jpg"
-        },
-        {
-            "id": 8,
+            "id": 5,
             "favorite": true,
             "name": "พงษ์พัฒน์",
             "artist": "ใจนักเลง",
             "cover": "https://2.bp.blogspot.com/-LW7KeaR4HDk/VskagTvM9oI/AAAAAAAAGyg/upRURMDWXdI/s1600/%25E0%25B8%259E%25E0%25B8%2587%25E0%25B8%25A9%25E0%25B9%258C%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2592%25E0%25B8%2599%25E0%25B9%258C%2B%25E0%25B8%25A7%25E0%25B8%258A%25E0%25B8%25B4%25E0%25B8%25A3%25E0%25B8%259A%25E0%25B8%25A3%25E0%25B8%25A3%25E0%25B8%2588%25E0%25B8%2587%2B%25E0%25B8%25AD%25E0%25B8%25B1%25E0%25B8%25A5%25E0%25B8%259A%25E0%25B8%25B1%25E0%25B9%2589%25E0%25B8%25A1%2B%25E0%25B8%259E%25E0%25B8%2587%25E0%25B8%25A9%25E0%25B9%258C%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2592%25E0%25B8%2599%25E0%25B9%258C%2B%25E0%25B8%25A0%25E0%25B8%25B2%25E0%25B8%2584%2B3%2B2535.jpg"
         },
         {
-            "id": 9,
+            "id": 6,
             "name": "ที่ว่าง",
             "artist": "Pause",
             "cover": "http://1.bp.blogspot.com/_JB0tU62ByLs/SjhD3xErGgI/AAAAAAAABWI/3un-XGhyQLM/w1200-h630-p-k-no-nu/1839_1224349879.jpg"

@@ -7,13 +7,15 @@ class SearchAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      // leadingWidth: 50,
       leading: IconButton(
         onPressed: () => Navigator.of(context).pop(),
         icon: const Icon(Iconsax.arrow_left),
       ),
       backgroundColor: const Color(0xFF161725),
       // centerTitle: true,
-      elevation: 0,
+      // elevation: 0,
+      // titleSpacing: 4,
       title: TextFormField(
         // style: TextStyle(color: Colors.white),
         decoration: InputDecoration(

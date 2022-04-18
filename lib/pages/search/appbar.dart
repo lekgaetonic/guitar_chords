@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 class SearchAppBar extends StatelessWidget {
   const SearchAppBar({Key? key}) : super(key: key);
@@ -6,6 +7,10 @@ class SearchAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      leading: IconButton(
+        onPressed: () => Navigator.of(context).pop(),
+        icon: const Icon(Iconsax.arrow_left),
+      ),
       backgroundColor: const Color(0xFF161725),
       // centerTitle: true,
       elevation: 0,

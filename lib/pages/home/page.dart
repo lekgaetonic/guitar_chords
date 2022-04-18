@@ -1,6 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:guitar_chords/models/songs_model.dart';
 import 'package:guitar_chords/pages/home/appbar.dart';
 import 'package:guitar_chords/pages/home/body.dart';
 import 'package:guitar_chords/pages/wysiwyg/page.dart';
@@ -11,6 +13,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    CollectionReference songs = FirebaseFirestore.instance.collection('songs');
+    getData(songs);
     return Scaffold(
       backgroundColor: const Color(0xFF202134),
       appBar: const PreferredSize(
@@ -20,9 +24,14 @@ class HomePage extends StatelessWidget {
       body: const HomeBody(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.to(
-            WysiwygPage(),
+          FirebaseFirestore.instance.collection('testing').add(
+            {
+              'timestamp': Timestamp.fromDate(DateTime.now()),
+            },
           );
+          // Get.to(
+          //   WysiwygPage(),
+          // );
         },
         backgroundColor: const Color(0xFF202134),
         child: const Icon(
@@ -31,5 +40,15 @@ class HomePage extends StatelessWidget {
       ),
       bottomNavigationBar: MainBottomBar(),
     );
+  }
+
+  Future<void> getData(CollectionReference songs) async {
+    // Get docs from collection reference
+    QuerySnapshot querySnapshot = await songs.get();
+
+    // Get data from docs and convert map to List
+    final allData = querySnapshot.docs.map((doc) => doc.data()).toList();
+
+    print(allData);
   }
 }

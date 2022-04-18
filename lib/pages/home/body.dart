@@ -12,6 +12,10 @@ class HomeBody extends StatelessWidget {
     return await rootBundle.loadString('assets/songs.json');
   }
 
+  Future<String> loadArtists() async {
+    return await rootBundle.loadString('assets/artists.json');
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -57,7 +61,7 @@ class HomeBody extends StatelessWidget {
           SizedBox(
             height: 110,
             child: FutureBuilder(
-              future: readJson(),
+              future: loadArtists(),
               builder: (BuildContext context, AsyncSnapshot snapshot) {
                 if (snapshot.hasData) {
                   var artists = json.decode(snapshot.data);
@@ -79,7 +83,7 @@ class HomeBody extends StatelessWidget {
           SizedBox(
             height: 110,
             child: FutureBuilder(
-              future: readJson(),
+              future: loadArtists(),
               builder: (BuildContext context, AsyncSnapshot snapshot) {
                 if (snapshot.hasData) {
                   var artists = json.decode(snapshot.data);
@@ -101,7 +105,7 @@ class HomeBody extends StatelessWidget {
           SizedBox(
             height: 110,
             child: FutureBuilder(
-              future: readJson(),
+              future: loadArtists(),
               builder: (BuildContext context, AsyncSnapshot snapshot) {
                 if (snapshot.hasData) {
                   var artists = json.decode(snapshot.data);
@@ -123,7 +127,7 @@ class HomeBody extends StatelessWidget {
           SizedBox(
             height: 110,
             child: FutureBuilder(
-              future: readJson(),
+              future: loadArtists(),
               builder: (BuildContext context, AsyncSnapshot snapshot) {
                 if (snapshot.hasData) {
                   var artists = json.decode(snapshot.data);
@@ -145,7 +149,7 @@ class HomeBody extends StatelessWidget {
           SizedBox(
             height: 110,
             child: FutureBuilder(
-              future: readJson(),
+              future: loadArtists(),
               builder: (BuildContext context, AsyncSnapshot snapshot) {
                 if (snapshot.hasData) {
                   var artists = json.decode(snapshot.data);
@@ -166,9 +170,5 @@ class HomeBody extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  Future<String> readJson() async {
-    return await rootBundle.loadString('assets/artists.json');
   }
 }

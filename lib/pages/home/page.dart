@@ -15,15 +15,13 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    CollectionReference songs = FirebaseFirestore.instance.collection('songs');
-    getData(songs);
     return Scaffold(
       backgroundColor: const Color(0xFF202134),
       appBar: const PreferredSize(
         preferredSize: Size(double.infinity, kToolbarHeight),
         child: HomeAppBar(),
       ),
-      body: const HomeBody(),
+      body: HomeBody(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           FirebaseFirestore.instance.collection('testing').add(
@@ -42,14 +40,5 @@ class HomePage extends StatelessWidget {
       ),
       bottomNavigationBar: MainBottomBar(),
     );
-  }
-
-  Future<void> getData(CollectionReference songs) async {
-    // Get docs from collection reference
-    QuerySnapshot querySnapshot = await songs.get();
-
-    // Get data from docs and convert map to List
-    final allData = querySnapshot.docs.map((doc) => doc.data()).toList();
-    allData.map((e) => print(e.toString())).toList();
   }
 }

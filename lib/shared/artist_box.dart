@@ -2,12 +2,10 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class ArtistBox extends StatelessWidget {
-  late String _cover;
-  late String _artist;
-  ArtistBox(String cover, String artist, {Key? key}) : super(key: key) {
-    _cover = cover;
-    _artist = artist;
-  }
+  final int _id;
+  final String _cover;
+  final String _artist;
+  ArtistBox(this._id, this._cover, this._artist, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

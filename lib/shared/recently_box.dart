@@ -14,35 +14,40 @@ class RecentlyBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 200,
-      child: ListTile(
-        onTap: (() => Get.to(LyricPage(_id))),
-        leading: ClipRRect(
-          borderRadius: BorderRadius.circular(8),
-          child: CachedNetworkImage(
-            imageUrl: _imageUrl,
-            placeholder: (context, url) => Image.asset(
-              'assets/images/watermark.png',
-            ),
-            errorWidget: (context, url, error) => Image.asset(
-              'assets/images/watermark.png',
+    return Padding(
+      padding: const EdgeInsets.only(left: 4, right: 4),
+      child: Container(
+        padding: const EdgeInsets.only(top: 4, bottom: 4),
+        // decoration: BoxDecoration(
+        //   borderRadius: BorderRadius.circular(8),
+        //   color: Colors.white10,
+        // ),
+        width: 200,
+        child: ListTile(
+          onTap: (() => Get.to(LyricPage(_id))),
+          leading: ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: CachedNetworkImage(
+              imageUrl: _imageUrl,
+              placeholder: (context, url) => Image.asset(
+                'assets/images/watermark.png',
+              ),
+              errorWidget: (context, url, error) => Image.asset(
+                'assets/images/watermark.png',
+              ),
             ),
           ),
-          // Image.network(
-          //   'https://s.isanook.com/jo/0/ui/484/2423305/dc6b8c0fd87d042da1c9432b4599cb20_1597220739.jpg',
-          // ),
-        ),
-        title: Text(
-          _song,
-          style: const TextStyle(
-            color: Colors.white,
+          title: Text(
+            _song,
+            style: const TextStyle(
+              color: Colors.white70,
+            ),
           ),
-        ),
-        subtitle: Text(
-          _artist,
-          style: const TextStyle(
-            color: Colors.white70,
+          subtitle: Text(
+            _artist,
+            style: const TextStyle(
+              color: Colors.white70,
+            ),
           ),
         ),
       ),

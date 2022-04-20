@@ -10,7 +10,7 @@ class ArtistBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 8.0, right: 8),
+      padding: const EdgeInsets.only(left: 8, right: 8),
       child: Container(
         padding: const EdgeInsets.all(4),
         decoration: BoxDecoration(
@@ -38,7 +38,7 @@ class ArtistBox extends StatelessWidget {
             Text(
               _artist,
               style: const TextStyle(
-                color: Colors.white,
+                color: Colors.white70,
               ),
             )
           ],

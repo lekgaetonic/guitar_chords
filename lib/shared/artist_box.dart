@@ -5,7 +5,8 @@ class ArtistBox extends StatelessWidget {
   final int _id;
   final String _cover;
   final String _artist;
-  ArtistBox(this._id, this._cover, this._artist, {Key? key}) : super(key: key);
+  const ArtistBox(this._id, this._cover, this._artist, {Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

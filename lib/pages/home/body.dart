@@ -39,12 +39,7 @@ class HomeBody extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                         itemCount: songs.length,
                         itemBuilder: (BuildContext context, int index) {
-                          return RecentlyBox(
-                            songs[index].id!,
-                            songs[index].cover!,
-                            songs[index].name!,
-                            songs[index].artist!,
-                          );
+                          return RecentlyBox(songs[index]);
                         },
                       ),
                     )

@@ -1,16 +1,16 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:guitar_chords/models/songs_model.dart';
 import 'package:guitar_chords/pages/lyric/page.dart';
 
 class RecentlyBox extends StatelessWidget {
-  final int _id;
-  final String _imageUrl;
-  final String _song;
-  final String _artist;
-  const RecentlyBox(this._id, this._imageUrl, this._song, this._artist,
-      {Key? key})
-      : super(key: key);
+  // final int _id;
+  // final String _imageUrl;
+  // final String _song;
+  // final String _artist;
+  final SongsModel _song;
+  const RecentlyBox(this._song, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +24,11 @@ class RecentlyBox extends StatelessWidget {
         // ),
         width: 200,
         child: ListTile(
-          onTap: (() => Get.to(LyricPage(_id))),
+          onTap: (() => Get.to(LyricPage(_song))),
           leading: ClipRRect(
             borderRadius: BorderRadius.circular(8),
             child: CachedNetworkImage(
-              imageUrl: _imageUrl,
+              imageUrl: _song.cover!,
               placeholder: (context, url) => Image.asset(
                 'assets/images/watermark.png',
               ),
@@ -38,13 +38,13 @@ class RecentlyBox extends StatelessWidget {
             ),
           ),
           title: Text(
-            _song,
+            _song.name!,
             style: const TextStyle(
               color: Colors.white70,
             ),
           ),
           subtitle: Text(
-            _artist,
+            _song.artist!,
             style: const TextStyle(
               color: Colors.white70,
             ),

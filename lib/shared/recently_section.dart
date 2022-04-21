@@ -24,18 +24,6 @@ class RecentlySection extends StatelessWidget {
             return Column(
               children: [
                 TopicBox('Recently Songs'),
-                ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: songLength,
-                  itemBuilder: (BuildContext context, int index) {
-                    return RecentlyBox(
-                      songs['songs'][index]['id'],
-                      songs['songs'][index]['cover'],
-                      songs['songs'][index]['name'],
-                      songs['songs'][index]['artist'],
-                    );
-                  },
-                ),
               ],
             );
           } else {

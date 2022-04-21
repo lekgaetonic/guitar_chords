@@ -3,6 +3,7 @@ class SongsModel {
   String? name;
   String? artist;
   String? cover;
+  String? lyric;
 
   SongsModel({this.id, this.name, this.artist, this.cover});
 
@@ -11,6 +12,7 @@ class SongsModel {
     name = json['name'];
     artist = json['artist'];
     cover = json['cover'];
+    lyric = json['lyric'];
   }
 
   Map<String, dynamic> toJson() {
@@ -19,6 +21,7 @@ class SongsModel {
     data['name'] = name;
     data['artist'] = artist;
     data['cover'] = cover;
+    data['lyric'] = lyric;
     return data;
   }
 }

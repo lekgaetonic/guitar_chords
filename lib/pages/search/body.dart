@@ -25,7 +25,7 @@ class SearchBody extends StatelessWidget {
                 child: ListTile(
                   tileColor: const Color(0xFF161725),
                   dense: true,
-                  onTap: () => Get.to(LyricPage(1)),
+                  onTap: null,
                   leading: ClipRRect(
                       borderRadius: BorderRadius.circular(3.0),
                       child: Image.network(songs['songs'][index]['cover'])),

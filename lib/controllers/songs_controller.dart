@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:guitar_chords/models/artists_model.dart';
+import 'package:guitar_chords/models/genres_model.dart';
 import 'package:guitar_chords/models/songs_model.dart';
 
 class SongsController {
@@ -13,5 +14,11 @@ class SongsController {
     return FirebaseFirestore.instance.collection('artists').snapshots().map(
         (snapshot) =>
             snapshot.docs.map((e) => ArtistsModel.fromJson(e.data())).toList());
+  }
+
+  Stream<List<GenresModel>> readGenres() {
+    return FirebaseFirestore.instance.collection('genres').snapshots().map(
+        (snapshot) =>
+            snapshot.docs.map((e) => GenresModel.fromJson(e.data())).toList());
   }
 }

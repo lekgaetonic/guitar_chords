@@ -22,23 +22,23 @@ class HomePage extends StatelessWidget {
         child: HomeAppBar(),
       ),
       body: HomeBody(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          FirebaseFirestore.instance.collection('testing').add(
-            {
-              'timestamp': Timestamp.fromDate(DateTime.now()),
-            },
-          );
-          // Get.to(
-          //   WysiwygPage(),
-          // );
-        },
-        backgroundColor: const Color(0xFF202134),
-        child: const Icon(
-          CupertinoIcons.add,
-        ),
-      ),
-      bottomNavigationBar: MainBottomBar(),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     FirebaseFirestore.instance.collection('testing').add(
+      //       {
+      //         'timestamp': Timestamp.fromDate(DateTime.now()),
+      //       },
+      //     );
+      //     // Get.to(
+      //     //   WysiwygPage(),
+      //     // );
+      //   },
+      //   backgroundColor: const Color(0xFF202134),
+      //   child: const Icon(
+      //     CupertinoIcons.add,
+      //   ),
+      // ),
+      bottomNavigationBar: MainBottomBar(0),
     );
   }
 }

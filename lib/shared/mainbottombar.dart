@@ -3,55 +3,65 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:guitar_chords/pages/favorite/page.dart';
 import 'package:guitar_chords/pages/home/page.dart';
+import 'package:guitar_chords/pages/lyric/add/page.dart';
+import 'package:iconsax/iconsax.dart';
 
 class MainBottomBar extends StatelessWidget {
-  MainBottomBar({
+  MainBottomBar(
+    this._selectedIndex, {
     Key? key,
   }) : super(key: key);
 
-  final _selectedIndex = 0.obs;
+  final int _selectedIndex;
 
   @override
   Widget build(BuildContext context) {
-    return Obx(
-      () => BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(AntIcons.home_outline),
-            label: 'Feeds',
-            activeIcon: Icon(AntIcons.home),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(AntIcons.heart_outline),
-            activeIcon: Icon(AntIcons.heart),
-            label: 'Favorite',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(AntIcons.user),
-            activeIcon: Icon(AntIcons.user),
-            label: 'Your',
-          ),
-        ],
-        currentIndex: _selectedIndex.value,
-        selectedItemColor: Colors.pinkAccent,
-        unselectedItemColor: Colors.white70,
-        backgroundColor: const Color(0xFF161725),
-        onTap: _onItemTapped,
-        selectedLabelStyle: const TextStyle(
-          fontWeight: FontWeight.bold,
+    return BottomNavigationBar(
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Iconsax.home),
+          label: 'Feeds',
+          activeIcon: Icon(Iconsax.home),
         ),
-        unselectedLabelStyle: const TextStyle(
-          fontWeight: FontWeight.bold,
+        BottomNavigationBarItem(
+          icon: Icon(Iconsax.heart),
+          activeIcon: Icon(Iconsax.heart),
+          label: 'Favorite',
         ),
-        type: BottomNavigationBarType.fixed,
+        BottomNavigationBarItem(
+          icon: Icon(Iconsax.add_square),
+          activeIcon: Icon(Iconsax.add_square),
+          label: 'Add',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Iconsax.activity),
+          activeIcon: Icon(Iconsax.activity),
+          label: 'Activity',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Iconsax.user),
+          activeIcon: Icon(Iconsax.user),
+          label: 'Your',
+        ),
+      ],
+      currentIndex: _selectedIndex,
+      selectedItemColor: Colors.pinkAccent,
+      unselectedItemColor: Colors.white70,
+      backgroundColor: const Color(0xFF161725),
+      onTap: _onItemTapped,
+      selectedLabelStyle: const TextStyle(
+        fontWeight: FontWeight.bold,
       ),
+      unselectedLabelStyle: const TextStyle(
+        fontWeight: FontWeight.bold,
+      ),
+      type: BottomNavigationBarType.fixed,
     );
   }
 
   void _onItemTapped(int index) {
-    _selectedIndex.value = index;
     switch (index) {
       case 0:
         Get.to(const HomePage());
@@ -60,6 +70,9 @@ class MainBottomBar extends StatelessWidget {
         Get.to(FavoritePage());
         break;
       case 2:
+        Get.to(LyricAddPage());
+        break;
+      case 3:
         Get.to(FavoritePage());
         break;
       default:

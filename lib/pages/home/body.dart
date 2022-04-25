@@ -13,13 +13,6 @@ import 'package:guitar_chords/shared/recently_box.dart';
 class HomeBody extends StatelessWidget {
   HomeBody({Key? key}) : super(key: key);
   SongsController songController = SongsController();
-  Future<String> loadSongs() async {
-    return await rootBundle.loadString('assets/songs.json');
-  }
-
-  Future<String> loadArtists() async {
-    return await rootBundle.loadString('assets/artists.json');
-  }
 
   @override
   Widget build(BuildContext context) {

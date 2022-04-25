@@ -7,7 +7,7 @@ import 'package:guitar_chords/pages/wysiwyg/page.dart';
 import 'package:guitar_chords/shared/mainbottombar.dart';
 
 class LyricAddPage extends StatelessWidget {
-  const LyricAddPage({Key? key}) : super(key: key);
+  LyricAddPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

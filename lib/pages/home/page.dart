@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
       //     CupertinoIcons.add,
       //   ),
       // ),
-      bottomNavigationBar: MainBottomBar(0),
+      bottomNavigationBar: const MainBottomBar(0),
     );
   }
 }

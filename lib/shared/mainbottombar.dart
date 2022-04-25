@@ -7,7 +7,7 @@ import 'package:guitar_chords/pages/lyric/add/page.dart';
 import 'package:iconsax/iconsax.dart';
 
 class MainBottomBar extends StatelessWidget {
-  MainBottomBar(
+  const MainBottomBar(
     this._selectedIndex, {
     Key? key,
   }) : super(key: key);

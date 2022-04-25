@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:guitar_chords/pages/favorite/appbar.dart';
 import 'package:guitar_chords/pages/favorite/body.dart';
+import 'package:guitar_chords/pages/home/appbar.dart';
 import 'package:guitar_chords/pages/wysiwyg/page.dart';
 import 'package:guitar_chords/shared/mainbottombar.dart';
 
@@ -13,21 +14,21 @@ class FavoritePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 40, 42, 66),
-        appBar: const PreferredSize(
+        backgroundColor: Color.fromARGB(255, 40, 42, 66),
+        appBar: PreferredSize(
           preferredSize: Size(double.infinity, kToolbarHeight),
-          child: FavoriteAppBar(),
+          child: HomeAppBar(),
         ),
-        body: const FavoriteBody(),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Get.to(WysiwygPage());
-          },
-          backgroundColor: Colors.amber,
-          child: const Icon(
-            CupertinoIcons.add,
-          ),
-        ),
+        body: FavoriteBody(),
+        // floatingActionButton: FloatingActionButton(
+        //   onPressed: () {
+        //     Get.to(WysiwygPage());
+        //   },
+        //   backgroundColor: Colors.amber,
+        //   child: const Icon(
+        //     CupertinoIcons.add,
+        //   ),
+        // ),
         bottomNavigationBar: MainBottomBar(1));
   }
 }

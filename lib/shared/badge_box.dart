@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guitar_chords/const/colors.dart';
 
 class BadgeBox extends StatelessWidget {
   final String _label;
@@ -15,7 +16,7 @@ class BadgeBox extends StatelessWidget {
         child: Text(
           _label,
           style: TextStyle(
-              color: selected ? const Color(0xFF161725) : Colors.white,
+              color: selected ? ConstColors.bodyBackground : Colors.white,
               fontWeight: FontWeight.bold),
         ),
         decoration: BoxDecoration(

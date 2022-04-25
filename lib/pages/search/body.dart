@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:guitar_chords/const/colors.dart';
 import 'package:guitar_chords/pages/lyric/page.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
@@ -23,7 +24,7 @@ class SearchBody extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 8.0),
                 child: ListTile(
-                  tileColor: const Color(0xFF161725),
+                  tileColor: ConstColors.bodyBackground,
                   dense: true,
                   onTap: null,
                   leading: ClipRRect(

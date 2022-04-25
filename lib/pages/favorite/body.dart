@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:guitar_chords/const/colors.dart';
 import 'package:guitar_chords/controllers/songs_controller.dart';
 import 'package:guitar_chords/models/songs_model.dart';
 import 'package:guitar_chords/pages/lyric/page.dart';
@@ -25,7 +26,7 @@ class FavoriteBody extends StatelessWidget {
               return InkWell(
                 onTap: (() => Get.to(LyricPage(songs[index]))),
                 child: Card(
-                  color: const Color(0xFF161725),
+                  color: ConstColors.bodyBackground,
                   margin: const EdgeInsets.only(
                       left: 8, top: 8, right: 8, bottom: 0),
                   elevation: 3,

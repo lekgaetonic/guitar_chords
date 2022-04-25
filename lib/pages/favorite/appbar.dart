@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guitar_chords/const/colors.dart';
 
 class FavoriteAppBar extends StatelessWidget {
   const FavoriteAppBar({Key? key}) : super(key: key);
@@ -6,7 +7,7 @@ class FavoriteAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: const Color(0xFF161725),
+      backgroundColor: ConstColors.bodyBackground,
       // centerTitle: true,
       title: TextFormField(
         // style: TextStyle(color: Colors.white),
@@ -22,11 +23,11 @@ class FavoriteAppBar extends StatelessWidget {
           )),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.0),
-            borderSide: const BorderSide(color: Color(0xFF161725), width: 1),
+            borderSide: BorderSide(color: ConstColors.bodyBackground, width: 1),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.0),
-            borderSide: const BorderSide(color: Color(0xFF161725), width: 1),
+            borderSide: BorderSide(color: ConstColors.bodyBackground, width: 1),
           ),
         ),
       ),

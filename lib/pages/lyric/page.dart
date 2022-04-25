@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import 'package:guitar_chords/const/colors.dart';
 import 'package:guitar_chords/models/songs_model.dart';
 import 'package:guitar_chords/pages/lyric/body.dart';
 import 'package:iconsax/iconsax.dart';
@@ -12,9 +13,9 @@ class LyricPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF202134),
+      backgroundColor: ConstColors.bodyBackground,
       appBar: AppBar(
-        backgroundColor: const Color(0xFF161725),
+        backgroundColor: ConstColors.appbarBackground,
         centerTitle: true,
         title: Column(
           children: [

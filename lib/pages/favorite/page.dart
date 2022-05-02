@@ -15,7 +15,7 @@ class FavoritePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Color.fromARGB(255, 40, 42, 66),
-        appBar: PreferredSize(
+        appBar: const PreferredSize(
           preferredSize: Size(double.infinity, kToolbarHeight),
           child: HomeAppBar(),
         ),

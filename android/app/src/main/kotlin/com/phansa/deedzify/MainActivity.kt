@@ -1,4 +1,4 @@
-package com.example.guitar_chords
+package com.phansa.deedzify
 
 import io.flutter.embedding.android.FlutterActivity
 

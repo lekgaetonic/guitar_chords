@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>22840271782-9nq2e9q9g9f3586o4a0lqd4n18hdfesk.apps.googleusercontent.com</string>
+	<string>22840271782-nqgaeof1ocnt52p006dfq580b713f7cb.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.22840271782-9nq2e9q9g9f3586o4a0lqd4n18hdfesk</string>
+	<string>com.googleusercontent.apps.22840271782-nqgaeof1ocnt52p006dfq580b713f7cb</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCQy0LwmYiNgcEXcX3km9oUuLqUc05V9Eg</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.guitarChords</string>
+	<string>com.phansa.deedzify</string>
 	<key>PROJECT_ID</key>
 	<string>deedzify-52482</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:22840271782:ios:1ae808d3f1b81f6d3aa567</string>
+	<string>1:22840271782:ios:a4a934028324e4133aa567</string>
 </dict>
 </plist>

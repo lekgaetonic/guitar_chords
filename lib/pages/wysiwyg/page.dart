@@ -19,24 +19,63 @@ class WysiwygPage extends StatelessWidget {
               print(value);
             },
             icon: const Icon(
-              Iconsax.add,
+              Iconsax.save_add,
               color: Colors.white,
               size: 32,
             ),
           )
         ],
       ),
-      body: FlutterSummernote(
-        hint: "Your chord here...",
-        key: _keyEditor,
-        hasAttachment: false,
-        customToolbar: """
-          [
-            ['style', ['bold', 'clear']],
-            ['color', ['color']],
-            ['view',['codeview']]
-          ]
-        """,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: const TextField(
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.all(8),
+                  border: OutlineInputBorder(),
+                  hintText: 'Artist',
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: const TextField(
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.all(8),
+                  border: OutlineInputBorder(),
+                  hintText: 'Album',
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: const TextField(
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.all(8),
+                  border: OutlineInputBorder(),
+                  hintText: 'Cover',
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: FlutterSummernote(
+                hint: "Your chord here...",
+                key: _keyEditor,
+                hasAttachment: false,
+                customToolbar: """
+                  [
+                    ['style', ['bold', 'clear']],
+                    ['color', ['color']],
+                    ['view',['codeview']]
+                  ]
+                """,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

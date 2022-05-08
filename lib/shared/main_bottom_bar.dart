@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:guitar_chords/pages/favorite/page.dart';
 import 'package:guitar_chords/pages/home/page.dart';
 import 'package:guitar_chords/pages/lyric/add/page.dart';
+import 'package:guitar_chords/pages/trending/page.dart';
 import 'package:guitar_chords/pages/wysiwyg/page.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -65,7 +66,7 @@ class MainBottomBar extends StatelessWidget {
   void _onItemTapped(int index) {
     switch (index) {
       case 0:
-        Get.to(const HomePage());
+        Get.offAll(const HomePage());
         break;
       case 1:
         Get.to(FavoritePage());
@@ -74,7 +75,7 @@ class MainBottomBar extends StatelessWidget {
         Get.to(WysiwygPage());
         break;
       case 3:
-        Get.to(FavoritePage());
+        Get.to(const TrendingPage());
         break;
       default:
         Get.to(const HomePage());

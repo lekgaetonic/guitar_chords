@@ -36,9 +36,11 @@ class RecentlyBox extends StatelessWidget {
         title: Text(
           _song.name!,
           style: const TextStyle(
-              color: Colors.white70,
-              fontWeight: FontWeight.bold,
-              overflow: TextOverflow.ellipsis),
+            color: Colors.white70,
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
         subtitle: Text(
           _song.artist!,

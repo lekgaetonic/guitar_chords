@@ -8,7 +8,7 @@ import 'package:guitar_chords/models/songs_model.dart';
 import 'package:guitar_chords/pages/home/appbar.dart';
 import 'package:guitar_chords/pages/home/body.dart';
 import 'package:guitar_chords/pages/wysiwyg/page.dart';
-import 'package:guitar_chords/shared/mainbottombar.dart';
+import 'package:guitar_chords/shared/main_bottom_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -22,22 +22,6 @@ class HomePage extends StatelessWidget {
         child: HomeAppBar(),
       ),
       body: HomeBody(),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {
-      //     FirebaseFirestore.instance.collection('testing').add(
-      //       {
-      //         'timestamp': Timestamp.fromDate(DateTime.now()),
-      //       },
-      //     );
-      //     // Get.to(
-      //     //   WysiwygPage(),
-      //     // );
-      //   },
-      //   backgroundColor: const Color(0xFF202134),
-      //   child: const Icon(
-      //     CupertinoIcons.add,
-      //   ),
-      // ),
       bottomNavigationBar: const MainBottomBar(0),
     );
   }

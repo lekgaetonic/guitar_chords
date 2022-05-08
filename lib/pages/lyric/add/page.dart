@@ -4,10 +4,10 @@ import 'package:get/get.dart';
 import 'package:guitar_chords/pages/home/appbar.dart';
 import 'package:guitar_chords/pages/search/body.dart';
 import 'package:guitar_chords/pages/wysiwyg/page.dart';
-import 'package:guitar_chords/shared/mainbottombar.dart';
+import 'package:guitar_chords/shared/main_bottom_bar.dart';
 
 class LyricAddPage extends StatelessWidget {
-  LyricAddPage({Key? key}) : super(key: key);
+  const LyricAddPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class LyricAddPage extends StatelessWidget {
         preferredSize: Size(double.infinity, kToolbarHeight),
         child: HomeAppBar(),
       ),
-      body: const SearchBody(),
+      body: SearchBody(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Get.to(
@@ -29,7 +29,7 @@ class LyricAddPage extends StatelessWidget {
           CupertinoIcons.add,
         ),
       ),
-      bottomNavigationBar: MainBottomBar(2),
+      bottomNavigationBar: const MainBottomBar(2),
     );
   }
 }

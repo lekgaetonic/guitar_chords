@@ -8,7 +8,7 @@ import 'package:guitar_chords/pages/home/body.dart';
 import 'package:guitar_chords/pages/search/appbar.dart';
 import 'package:guitar_chords/pages/search/body.dart';
 import 'package:guitar_chords/pages/wysiwyg/page.dart';
-import 'package:guitar_chords/shared/mainbottombar.dart';
+import 'package:guitar_chords/shared/main_bottom_bar.dart';
 
 class SearchPage extends StatelessWidget {
   SearchPage({Key? key}) : super(key: key);
@@ -18,22 +18,11 @@ class SearchPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFF202134),
       appBar: const PreferredSize(
-        preferredSize: Size(double.infinity, kToolbarHeight),
+        preferredSize: const Size(double.infinity, kToolbarHeight),
         child: SearchAppBar(),
       ),
-      body: const SearchBody(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Get.to(
-            WysiwygPage(),
-          );
-        },
-        backgroundColor: const Color(0xFF202134),
-        child: const Icon(
-          CupertinoIcons.add,
-        ),
-      ),
-      bottomNavigationBar: MainBottomBar(0),
+      body: SearchBody(),
+      bottomNavigationBar: const MainBottomBar(0),
     );
   }
 }

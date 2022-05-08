@@ -10,7 +10,7 @@ class SearchAppBar extends StatelessWidget {
       // leadingWidth: 50,
       leading: IconButton(
         onPressed: () => Navigator.of(context).pop(),
-        icon: const Icon(Iconsax.arrow_left),
+        icon: const Icon(Icons.arrow_back_ios_new),
       ),
       backgroundColor: const Color(0xFF161725),
       // centerTitle: true,

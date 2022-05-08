@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:guitar_chords/const/colors.dart';
+import 'package:guitar_chords/controllers/songs_controller.dart';
+import 'package:guitar_chords/models/songs_model.dart';
 import 'package:guitar_chords/pages/lyric/page.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
@@ -8,18 +10,18 @@ import 'dart:math';
 import 'package:ant_icons/ant_icons.dart';
 
 class SearchBody extends StatelessWidget {
-  const SearchBody({Key? key}) : super(key: key);
+  SearchBody({Key? key}) : super(key: key);
+  SongsController songController = SongsController();
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: readJson(),
+    return StreamBuilder(
+      stream: songController.readSongs(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasData) {
-          var songs = json.decode(snapshot.data);
-          var songLength = (songs['songs'] as List).toList().length;
+          List<SongsModel> songs = snapshot.data!;
           return ListView.builder(
-            itemCount: songLength,
+            itemCount: songs.length,
             itemBuilder: (BuildContext context, int index) {
               return Padding(
                 padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 8.0),
@@ -29,9 +31,9 @@ class SearchBody extends StatelessWidget {
                   onTap: null,
                   leading: ClipRRect(
                       borderRadius: BorderRadius.circular(3.0),
-                      child: Image.network(songs['songs'][index]['cover'])),
+                      child: Image.network(songs[index].cover!)),
                   title: Text(
-                    songs['songs'][index]['name'],
+                    songs[index].name!,
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -41,7 +43,7 @@ class SearchBody extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        songs['songs'][index]['artist'],
+                        songs[index].artist!,
                         style: const TextStyle(
                             color: Colors.grey, fontWeight: FontWeight.bold),
                       ),
@@ -92,16 +94,14 @@ class SearchBody extends StatelessWidget {
               );
             },
           );
-        } else {
+        } else if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(
             child: CircularProgressIndicator(),
           );
+        } else {
+          return const SizedBox.shrink();
         }
       },
     );
-  }
-
-  Future<String> readJson() async {
-    return await rootBundle.loadString('assets/lyrics.json');
   }
 }

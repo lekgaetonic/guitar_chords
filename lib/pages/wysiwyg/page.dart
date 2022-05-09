@@ -6,6 +6,10 @@ import 'package:iconsax/iconsax.dart';
 class WysiwygPage extends StatelessWidget {
   WysiwygPage({Key? key}) : super(key: key);
   final GlobalKey<FlutterSummernoteState> _keyEditor = GlobalKey();
+  final artistController = TextEditingController();
+  TextEditingController albumController = TextEditingController();
+  TextEditingController coverController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +40,7 @@ class WysiwygPage extends StatelessWidget {
                   const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: TextField(
+                      // controller:  artistController,
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.all(8),
                         border: OutlineInputBorder(),
@@ -90,11 +95,26 @@ class WysiwygPage extends StatelessWidget {
                 width: Get.width,
                 height: 56.0,
                 decoration: const BoxDecoration(
-                  color: Color(0xFF20FFFF),
+                  color: Color(0xFF202134),
                 ),
-                child: const ElevatedButton(
-                  onPressed: null,
-                  child: Text('data'),
+                child: ElevatedButton(
+                  onPressed: () {
+                    final song = <String, dynamic>{
+                      "id": 1815,
+                      "artist": "Ada",
+                      "album": "Lovelace",
+                      "cover": 1815,
+                      "name": "sdsd",
+                      "rating": 0,
+                      "lyric": ""
+                    };
+                  },
+                  child: const Text(
+                    'Save',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
             ),

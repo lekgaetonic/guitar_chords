@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_summernote/flutter_summernote.dart';
 import 'package:get/get.dart';
+import 'package:guitar_chords/controllers/songs_controller.dart';
 import 'package:iconsax/iconsax.dart';
 
 class WysiwygPage extends StatelessWidget {
   WysiwygPage({Key? key}) : super(key: key);
   final GlobalKey<FlutterSummernoteState> _keyEditor = GlobalKey();
-  final artistController = TextEditingController();
+  SongsController songController = SongsController();
+  TextEditingController artistController = TextEditingController();
   TextEditingController albumController = TextEditingController();
   TextEditingController coverController = TextEditingController();
   TextEditingController nameController = TextEditingController();
@@ -37,34 +39,47 @@ class WysiwygPage extends StatelessWidget {
             SingleChildScrollView(
               child: Column(
                 children: [
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      // controller:  artistController,
-                      decoration: InputDecoration(
+                      controller: artistController,
+                      decoration: const InputDecoration(
                         contentPadding: EdgeInsets.all(8),
                         border: OutlineInputBorder(),
                         hintText: 'Artist',
                       ),
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      decoration: InputDecoration(
+                      controller: albumController,
+                      decoration: const InputDecoration(
                         contentPadding: EdgeInsets.all(8),
                         border: OutlineInputBorder(),
                         hintText: 'Album',
                       ),
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      decoration: InputDecoration(
+                      controller: coverController,
+                      decoration: const InputDecoration(
                         contentPadding: EdgeInsets.all(8),
                         border: OutlineInputBorder(),
                         hintText: 'Cover',
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      controller: nameController,
+                      decoration: const InputDecoration(
+                        contentPadding: EdgeInsets.all(8),
+                        border: OutlineInputBorder(),
+                        hintText: 'Name',
                       ),
                     ),
                   ),
@@ -83,6 +98,9 @@ class WysiwygPage extends StatelessWidget {
                       ['view',['codeview']]
                     ]
                   """,
+                      returnContent: (content) {
+                        print(content);
+                      },
                     ),
                   ),
                 ],
@@ -99,15 +117,8 @@ class WysiwygPage extends StatelessWidget {
                 ),
                 child: ElevatedButton(
                   onPressed: () {
-                    final song = <String, dynamic>{
-                      "id": 1815,
-                      "artist": "Ada",
-                      "album": "Lovelace",
-                      "cover": 1815,
-                      "name": "sdsd",
-                      "rating": 0,
-                      "lyric": ""
-                    };
+                    songController.addSong(artistController.text,
+                        coverController.text, nameController.text, "");
                   },
                   child: const Text(
                     'Save',

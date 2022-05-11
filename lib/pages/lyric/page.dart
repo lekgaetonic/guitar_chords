@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:guitar_chords/const/colors.dart';
@@ -13,7 +12,7 @@ class LyricPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ConstColors.bodyBackground,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: ConstColors.appbarBackground,
         centerTitle: true,

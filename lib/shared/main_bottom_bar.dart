@@ -5,7 +5,7 @@ import 'package:guitar_chords/pages/favorite/page.dart';
 import 'package:guitar_chords/pages/home/page.dart';
 import 'package:guitar_chords/pages/lyric/add/page.dart';
 import 'package:guitar_chords/pages/trending/page.dart';
-import 'package:guitar_chords/pages/wysiwyg/page.dart';
+import 'package:guitar_chords/pages/wysiwyg/step1_page.dart';
 import 'package:iconsax/iconsax.dart';
 
 class MainBottomBar extends StatelessWidget {
@@ -72,7 +72,7 @@ class MainBottomBar extends StatelessWidget {
         Get.to(FavoritePage());
         break;
       case 2:
-        Get.to(WysiwygPage());
+        Get.to(WysiwygStep1Page());
         break;
       case 3:
         Get.to(const TrendingPage());

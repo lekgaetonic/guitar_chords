@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:guitar_chords/pages/favorite/appbar.dart';
 import 'package:guitar_chords/pages/favorite/body.dart';
 import 'package:guitar_chords/pages/home/appbar.dart';
-import 'package:guitar_chords/pages/wysiwyg/page.dart';
+import 'package:guitar_chords/pages/wysiwyg/step1_page.dart';
 import 'package:guitar_chords/shared/main_bottom_bar.dart';
 
 class FavoritePage extends StatelessWidget {

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:guitar_chords/pages/home/appbar.dart';
 import 'package:guitar_chords/pages/search/body.dart';
-import 'package:guitar_chords/pages/wysiwyg/page.dart';
+import 'package:guitar_chords/pages/wysiwyg/step1_page.dart';
 import 'package:guitar_chords/shared/main_bottom_bar.dart';
 
 class LyricAddPage extends StatelessWidget {
@@ -21,7 +21,7 @@ class LyricAddPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Get.to(
-            WysiwygPage(),
+            WysiwygStep1Page(),
           );
         },
         backgroundColor: const Color(0xFF202134),

@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:guitar_chords/pages/search/appbar.dart';
 import 'package:guitar_chords/pages/search/body.dart';
 import 'package:guitar_chords/pages/trending/body.dart';
-import 'package:guitar_chords/pages/wysiwyg/page.dart';
+import 'package:guitar_chords/pages/wysiwyg/step1_page.dart';
 import 'package:guitar_chords/shared/main_bottom_bar.dart';
 
 class TrendingPage extends StatelessWidget {

@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import 'package:guitar_chords/models/songs_model.dart';
 import 'package:guitar_chords/pages/home/appbar.dart';
 import 'package:guitar_chords/pages/home/body.dart';
-import 'package:guitar_chords/pages/wysiwyg/page.dart';
+import 'package:guitar_chords/pages/wysiwyg/step1_page.dart';
 import 'package:guitar_chords/shared/main_bottom_bar.dart';
 
 class HomePage extends StatelessWidget {

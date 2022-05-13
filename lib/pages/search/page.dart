@@ -7,7 +7,7 @@ import 'package:guitar_chords/pages/home/appbar.dart';
 import 'package:guitar_chords/pages/home/body.dart';
 import 'package:guitar_chords/pages/search/appbar.dart';
 import 'package:guitar_chords/pages/search/body.dart';
-import 'package:guitar_chords/pages/wysiwyg/page.dart';
+import 'package:guitar_chords/pages/wysiwyg/step1_page.dart';
 import 'package:guitar_chords/shared/main_bottom_bar.dart';
 
 class SearchPage extends StatelessWidget {
@@ -18,7 +18,7 @@ class SearchPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFF202134),
       appBar: const PreferredSize(
-        preferredSize: const Size(double.infinity, kToolbarHeight),
+        preferredSize: Size(double.infinity, kToolbarHeight),
         child: SearchAppBar(),
       ),
       body: SearchBody(),
